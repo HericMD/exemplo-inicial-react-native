@@ -1,16 +1,18 @@
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import Header from "./src/components/Header"
+import listaEstados from './src/components/ListaEstados'
 
 export default function App() {
   const tarefas = ["tarefa 1", "tarefa 2", "tarefa 3"]
   return (
     <View style={styles.container}>
-      <Header />
-      <View>
-        <FlatList 
-        data = {tarefas}
-        renderItem = {({item}) => <Text>{item}</Text>}
-        />
+      <Header titulo="teste"/>
+      <Header titulo="lista-legal"/>
+      <View> 
+        <ListaEstado />
+        {/* {tarefas.map((tarefa) => (
+        <Text>(task)</Text>
+        ))} */}
       </View>
     </View>
   );

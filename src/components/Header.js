@@ -1,10 +1,22 @@
 import { View, Text, StyleSheet } from "react-native";
-export default function Header() {
-  return (
+import { Component } from "react";
+
+// export default function Header(props) {
+//   return (
+//     <View style={styles.header}>
+//       <Text style={{ color: "white", fontSize: 20 }}>{props.titulo}</Text>
+//     </View>
+//   );
+// }
+
+export default class Header extends Component {
+  render() {
     <View style={styles.header}>
-      <Text style={{ color: "white", fontSize: 20 }}>lista pog</Text>
-    </View>
-  );
+      <Text style={{ color: "white", fontSize: 20 }}>
+        {this.props.titulo}
+      </Text>
+    </View>;
+  }
 }
 
 const styles = StyleSheet.create({
